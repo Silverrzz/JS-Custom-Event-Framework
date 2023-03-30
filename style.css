@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.section {
+    margin: 30px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.selection {
+    height: 100px;
+    width: 100px;
+}
+
+.red {
+    background-color: #ff0000;
+    border: 2px solid #ff0000
+}
+
+.green {
+    background-color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.blue {
+    background-color: #0000ff;
+    border: 2px solid #0000ff;
+}
+
+.yellow {
+    background-color: #ffff00;
+    border: 2px solid #ffff00;
+}
+
+.purple {
+    background-color: #ff00ff;
+    border: 2px solid #ff00ff;
+}
+
+.orange {
+    background-color: #ff8000;
+    border: 2px solid #ff8000;
+}
+
+.teal {
+    background-color: #00ffff;
+    border: 2px solid #00ffff;
+}
+
+.selected {
+    border: 2px solid #000000;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Events Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="selectors.js"></script>
+    <script src="events.js"></script>
+    <script src="display.js"></script>
+</head>
+<body>
+
+    <div class="section colour-selector">
+        <div class="title">Choose your favourite!</div>
+        <div class="flex children_trigger_event" data-event-targets="colour-changed" data-event-types="click">
+            <div class="selection red" data-values="red"></div>
+            <div class="selection blue" data-values="blue"></div>
+            <div class="selection green" data-values="green"></div>
+            <div class="selection yellow" data-values="yellow"></div>
+            <div class="selection purple" data-values="purple"></div>
+            <div class="selection teal" data-values="teal"></div>
+            <div class="selection orange" data-values="orange"></div>
+        </div>
+    </div>
+
+    <div class="section number-selector">
+        <div class="title">Choose your favourite number!</div>
+        <select name="number" id="number" class="trigger_event" data-event-targets="number-changed" data-event-types="change" data-values="self-value">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+
+    <div class="section text-input">
+        <div class="title">Type colour</div>
+        <input type="text" class="trigger_event" data-event-targets="colour-changed,text-changed" data-event-types="keyup,keyup" data-values="self-value">
+    </div>
+
+    <div class="section display">
+        <div class="title">Here's a cool thing!</div>
+        <div class="feature"></div>
+    </div>
+
+    <div class="section second-display">
+        <div class="title">Here's another cool thing!</div>
+        <div class="feature-two"></div>
+    </div>
+    <div class="section">
+        <button class="trigger_event" data-event-targets="clear" data-event-types="click" data-values="all">Clear All</button>
+        <button class="trigger_event" data-event-targets="clear" data-event-types="click" data-values=".colour-selector">Clear Colour</button>
+        <button class="trigger_event" data-event-targets="text-changed" data-event-types="click" data-values="extract-#number">Get Number</button>
+    </div>
+
+    <div class="section">
+        <div class="title">Text combos!</div>
+        <div class="flex">
+            <input type="text" id="text1" data-values="self-value">
+            <input type="text" id="text2" data-values="self-value">
+            <button class="trigger_event" data-event-targets="text-changed,number-changed" data-event-types="click,click" data-values="extract-#text1,extract-#text2">Combine Text</button>
+        </div>
+    </div>
+    
+</body>
+</html>
